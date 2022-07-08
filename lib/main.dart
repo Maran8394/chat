@@ -3,15 +3,14 @@ import 'package:chat/screens/welcome_screen.dart';
 import 'package:chat/screens/login_screen.dart';
 import 'package:chat/screens/registration_screen.dart';
 import 'package:chat/screens/chat_screen.dart';
-import 'package:device_preview/device_preview.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 // void main() => runApp(const FlashChat());
-void main() => runApp(
-      DevicePreview(
-        enabled: true,
-        builder: (context) => FlashChat(), // Wrap your app
-      ),
-    );
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  return runApp(const FlashChat());
+}
 
 class FlashChat extends StatelessWidget {
   const FlashChat({Key? key}) : super(key: key);
@@ -19,12 +18,10 @@ class FlashChat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        useInheritedMediaQuery: true,
-        locale: DevicePreview.locale(context),
-        builder: DevicePreview.appBuilder,
-        theme: ThemeData.dark().copyWith(
+        theme: ThemeData.light().copyWith(
           textTheme: const TextTheme(
             bodyText1: TextStyle(color: Colors.black54),
+            bodyText2: TextStyle(color: Colors.black54),
           ),
         ),
         initialRoute: WelcomeScreen.id,

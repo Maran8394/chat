@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "698319184400",
+    "project_id": "flutterauth-ebf48",
+    "storage_bucket": "flutterauth-ebf48.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:698319184400:android:b2acc2bb8e77f5626a6095",
+        "android_client_info": {
+          "package_name": "com.example.chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "698319184400-jasu08kupf9o27eu4jchrnl2e097a543.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3rHzKITD_ln0zAtxHbdJXaZ-z0JlceM0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "698319184400-jasu08kupf9o27eu4jchrnl2e097a543.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
