@@ -103,8 +103,12 @@ class MessagesStream extends StatelessWidget {
       stream: _fireStore.collection("messages").snapshots(),
       builder: (context, snapshot) {
         if (!snapshot.hasData) {
-          return const CircularProgressIndicator(
-            backgroundColor: Colors.lightBlueAccent,
+          return const SizedBox(
+            width: 50,
+            height: 40,
+            child: CircularProgressIndicator(
+              backgroundColor: Colors.lightBlueAccent,
+            ),
           );
         }
         final dynamic messages = snapshot.data;
